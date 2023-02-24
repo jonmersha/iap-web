@@ -1,0 +1,5 @@
+<select [formControl]="control" class="form-control select2" style="width: 100%;">
+    <label>Select One </label>
+    <option *ngFor="let item of items" [value]="item.id">{{ item.name }}</option>
+</select>
+<!-- <p>{{form}}</p> -->
