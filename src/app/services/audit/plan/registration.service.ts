@@ -3,22 +3,24 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { API_BASE_URL } from 'src/app/constants';
 
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class RegistrationService {
+ 
   
   
-  private apiUrl=`${API_BASE_URL}/plan/add`;
+  private apiUrl=`${API_BASE_URL}`;
   constructor(private http: HttpClient) { }
 
- register(body:any):Observable<any>{
+ register(body:any,end:any):Observable<any>{
   const httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   };
-  return this.http.post(this.apiUrl,body,httpOptions)
+  return this.http.post(`${API_BASE_URL}${end}`,body,httpOptions)
  }
 }

@@ -48,7 +48,7 @@ constructor(private reistration:RegistrationService,private planListServiec:Audi
       risk_level: this.risk_level.value  
  }
  console.log(jsonData)
- this.reistration.register(jsonData).subscribe(response=>{
+ this.reistration.register(jsonData,'/plan/add').subscribe(response=>{
   this.response=response;
   this.getAnnualPlanList()  
  })
