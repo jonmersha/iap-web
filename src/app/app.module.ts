@@ -38,6 +38,11 @@ import { NewRecomendationComponent } from './components/audit/recomndation/new-r
 import { EditRecomendationComponent } from './components/audit/recomndation/edit-recomendation/edit-recomendation.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './collection/page-not-found/page-not-found.component';
+import { OuComponent } from './components/setting/ou/ou.component';
+import { OuStructureComponent } from './components/setting/ou-structure/ou-structure.component';
+import { TeamComponent } from './components/setting/team/team.component';
+import { AudteesComponent } from './components/setting/audtees/audtees.component';
+import { UserComponent } from './components/setting/user/user.component';
 
 
 
@@ -73,7 +78,12 @@ import { PageNotFoundComponent } from './collection/page-not-found/page-not-foun
     FindingEditComponent,
     NewRecomendationComponent,
     EditRecomendationComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    OuComponent,
+    OuStructureComponent,
+    TeamComponent,
+    AudteesComponent,
+    UserComponent
     
   ],
   imports: [

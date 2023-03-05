@@ -6,6 +6,8 @@ import { CommonService } from 'src/app/services/combo/common.service';
 @Component({
   selector: 'app-combo-items',
   templateUrl: './combo-items.component.html',
+  styleUrls:['./combo-items.component.css']
+
 
 
 })
