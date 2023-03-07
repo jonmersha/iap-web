@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HomeComponent } from './layout/home/home.component';
-import { SideMenuComponent } from './layout/side-menu/side-menu.component';
+//import { HomeComponent } from './layout/home/home.component';
+
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { FoterComponent } from './layout/foter/foter.component';
 import { ASideComponent } from './layout/a-side/a-side.component';
@@ -16,7 +16,7 @@ import { AnualPlanComponent } from './components/audit/audit-plan/anual-plan/anu
 import { AnualPlanListComponent } from './components/audit/audit-plan/anual-plan-list/anual-plan-list.component';
 import { NewUserComponent } from './components/user/new-user/new-user.component';
 import { UserEditComponent } from './components/user/user-edit/user-edit.component';
-import { AuditPlanService } from './services/audit-paln/audit-plan.service';
+import { AuditPlanService } from './dash/services/audit-paln/audit-plan.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ComboItemsComponent } from './components/combo-items/combo-items.component';
 import { UploadAnualPlanComponent } from './components/audit/audit-plan/upload-anual-plan/upload-anual-plan.component';
@@ -43,6 +43,7 @@ import { OuStructureComponent } from './components/setting/ou-structure/ou-struc
 import { TeamComponent } from './components/setting/team/team.component';
 import { AudteesComponent } from './components/setting/audtees/audtees.component';
 import { UserComponent } from './components/setting/user/user.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 
@@ -51,8 +52,8 @@ import { UserComponent } from './components/setting/user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SideMenuComponent,
+    //HomeComponent,
+    
     NavBarComponent,
     FoterComponent,
     ASideComponent,
@@ -83,7 +84,8 @@ import { UserComponent } from './components/setting/user/user.component';
     OuStructureComponent,
     TeamComponent,
     AudteesComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
     
   ],
   imports: [

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable, ObservableInput } from 'rxjs';
-import { AuditPlanService } from 'src/app/services/audit-paln/audit-plan.service';
+import { AuditPlanService } from 'src/app/dash/services/audit-paln/audit-plan.service';
 
 
 @Component({

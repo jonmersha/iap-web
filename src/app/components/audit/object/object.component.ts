@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { RegistrationService } from 'src/app/services/audit/plan/registration.service';
+import { RegistrationService } from 'src/app/dash/services/audit/plan/registration.service';
 
 @Component({
   selector: 'app-object',
