@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from '../collection/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 
-import { DashBoardComponent } from './dash-board/dash-board.component';
+import { DashBoardComponent } from './layout/container/dash-board.component';
 
 const routes: Routes = [
 

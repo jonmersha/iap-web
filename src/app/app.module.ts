@@ -43,7 +43,10 @@ import { OuStructureComponent } from './components/setting/ou-structure/ou-struc
 import { TeamComponent } from './components/setting/team/team.component';
 import { AudteesComponent } from './components/setting/audtees/audtees.component';
 import { UserComponent } from './components/setting/user/user.component';
-import { LoginComponent } from './auth/login/login.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { SignupComponent } from './auth/components/signup/signup.component';
+import { ChangeAssWordComponent } from './auth/components/change-ass-word/change-ass-word.component';
+import { DeactivateEmployeComponent } from './auth/components/deactivate-employe/deactivate-employe.component';
 
 
 
@@ -85,7 +88,10 @@ import { LoginComponent } from './auth/login/login.component';
     TeamComponent,
     AudteesComponent,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    ChangeAssWordComponent,
+    DeactivateEmployeComponent
     
   ],
   imports: [
