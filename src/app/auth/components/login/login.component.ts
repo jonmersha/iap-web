@@ -35,18 +35,16 @@ let body={
   body:"user_id,user_name,pswd"  
 }
 
-    //alert('submit clicked')
-    //alert(body)
+ 
     this.loginService.login(body).subscribe(data=>{
-     // alert(data);
       if(data.data.success==false){
-        //alert(data.data.success)
         this.user=data.data.message
       }
-      else{
-        //getting the details of the employees from dtsvse based on the emplyees 
-        
+      else if(data.data.success==true){       
         this.router.navigate(['dash'])
+      }
+      else{
+        this.user='Error login To system';
       }
     })
    
