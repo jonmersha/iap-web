@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators  } from '@angular/forms';
-import { AuditPlanService } from 'src/app/dash/services/audit-paln/audit-plan.service';
-import { RegistrationService } from 'src/app/dash/services/audit/plan/registration.service';
+import { AuditPlanService } from 'src/app/Application/services/audit-paln/audit-plan.service';
+import { RegistrationService } from 'src/app/Application/services/audit/plan/registration.service';
 
 @Component({
   selector: 'app-anual-plan',

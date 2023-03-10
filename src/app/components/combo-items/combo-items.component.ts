@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { AuditPlanService } from 'src/app/dash/services/audit-paln/audit-plan.service';
-import { CommonService } from 'src/app/dash/services/combo/common.service';
+import { AuditPlanService } from 'src/app/Application/services/audit-paln/audit-plan.service';
+import { CommonService } from 'src/app/Application/services/combo/common.service';
 
 @Component({
   selector: 'app-combo-items',

@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HealthService } from '../../health.service';
 import { LoginService } from '../../service/login.service';
 
 @Component({
@@ -8,10 +10,28 @@ import { LoginService } from '../../service/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   user:string | undefined;
-  constructor(private router:Router,private loginService:LoginService){}
+  constructor(
+    private router:Router,
+    private loginService:LoginService,
+    private healthCheck:HealthService
+    ){}
+  ngOnInit(){
+    this.healthCheck.checkHealth().toPromise().then((response)=>
+    {
+      this.user=response.message
+      return true
+    },(error:HttpErrorResponse)=>{
+      console.log(error.error)
+      this.user=`${error.message}`
+      return false
+    }).catch((error)=>{
+
+      return false;
+    })
+  }
   logionControles=new FormGroup({
     email:new FormControl(),
     password:new FormControl()
@@ -43,18 +63,14 @@ let body={
         this.user=data.data.message
       }
       else if(data.data.success==true){ 
-
-        localStorage.setItem('token',data.data)     
-
+        //console.log(data.data)
+        localStorage.setItem('token',JSON.stringify(data.data))     
       }
       else{
         this.user='Error login To system';
         localStorage.removeItem('token')
       }
-
-
        this.router.navigate(['dash'])
-
 
 
     })

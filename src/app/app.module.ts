@@ -16,7 +16,7 @@ import { AnualPlanComponent } from './components/audit/audit-plan/anual-plan/anu
 import { AnualPlanListComponent } from './components/audit/audit-plan/anual-plan-list/anual-plan-list.component';
 import { NewUserComponent } from './components/user/new-user/new-user.component';
 import { UserEditComponent } from './components/user/user-edit/user-edit.component';
-import { AuditPlanService } from './dash/services/audit-paln/audit-plan.service';
+import { AuditPlanService } from './Application/services/audit-paln/audit-plan.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ComboItemsComponent } from './components/combo-items/combo-items.component';
 import { UploadAnualPlanComponent } from './components/audit/audit-plan/upload-anual-plan/upload-anual-plan.component';
@@ -38,11 +38,10 @@ import { NewRecomendationComponent } from './components/audit/recomndation/new-r
 import { EditRecomendationComponent } from './components/audit/recomndation/edit-recomendation/edit-recomendation.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './collection/page-not-found/page-not-found.component';
-import { OuComponent } from './components/setting/ou/ou.component';
-import { OuStructureComponent } from './components/setting/ou-structure/ou-structure.component';
-import { TeamComponent } from './components/setting/team/team.component';
-import { AudteesComponent } from './components/setting/audtees/audtees.component';
-import { UserComponent } from './components/setting/user/user.component';
+import { OuComponent } from './Application/setting/ou/ou.component';
+import { TeamComponent } from './Application/setting/team/team.component';
+import { AudteesComponent } from './Application/setting/audtees/audtees.component';
+import { UserComponent } from './Application/setting/user/user.component';
 import { LoginComponent } from './auth/components/login/login.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
 import { ChangeAssWordComponent } from './auth/components/change-ass-word/change-ass-word.component';
@@ -84,7 +83,6 @@ import { DeactivateEmployeComponent } from './auth/components/deactivate-employe
     EditRecomendationComponent,
     PageNotFoundComponent,
     OuComponent,
-    OuStructureComponent,
     TeamComponent,
     AudteesComponent,
     UserComponent,

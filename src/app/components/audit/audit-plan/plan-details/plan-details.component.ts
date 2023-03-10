@@ -1,7 +1,7 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
-import { AuditObjectService } from 'src/app/dash/services/combo/audit-object.service';
+import { AuditObjectService } from 'src/app/Application/services/combo/audit-object.service';
 
 @Component({
   selector: 'app-plan-details',

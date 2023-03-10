@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path:'dash',
     canActivate:[AuthGuard],
-    loadChildren:()=>import('./dash/dash.module').then(x=>x.DashModule)},
+    loadChildren:()=>import('./Application/dash.module').then(x=>x.DashModule)},
   {path:'**',component:PageNotFoundComponent},
 ];
 
