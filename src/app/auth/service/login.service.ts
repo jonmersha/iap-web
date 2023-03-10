@@ -14,4 +14,11 @@ export class LoginService {
    login(body:any):Observable<any>{
     return this.httpClinet.post(`${API_BASE_URL}/user/login`,body,httpOptions)
    }
+   logOut(): void{
+    localStorage.removeItem('token')
+   }
+   isAuthenticated():boolean{
+    const token=localStorage.getItem('token')
+    return !!token;
+   }
 }

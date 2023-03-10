@@ -37,15 +37,26 @@ let body={
 
  
     this.loginService.login(body).subscribe(data=>{
+
       if(data.data.success==false){
+        localStorage.removeItem('token')
         this.user=data.data.message
       }
-      else if(data.data.success==true){       
-        this.router.navigate(['dash'])
+      else if(data.data.success==true){ 
+
+        localStorage.setItem('token',data.data)     
+
       }
       else{
         this.user='Error login To system';
+        localStorage.removeItem('token')
       }
+
+
+       this.router.navigate(['dash'])
+
+
+
     })
    
 
