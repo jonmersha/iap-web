@@ -2,18 +2,18 @@
     <label>{{label}}</label>
     <input
       type="text"
-      [formControl]="formControle"
+      [formControl]="control"
       class="form-control"
-      [ngClass]="{ 'is-invalid': submitted && formControle.errors }"
+      [ngClass]="{ 'is-invalid': submitted && control.errors }"
     />
-     <div *ngIf="submitted && formControle.errors" class="invalid-feedback">
-      <div *ngIf="formControle.errors['required']">
+     <div *ngIf="submitted && control.errors" class="invalid-feedback">
+      <div *ngIf="control.errors['required']">
         {{label}} Is required
     </div>
-    <div *ngIf="formControle.errors['minlength']">
+    <div *ngIf="control.errors['minlength']">
         {{label}} must be at least 2 characters
       </div>
-      <div *ngIf="formControle.errors['maxlength']">
+      <div *ngIf="control.errors['maxlength']">
         {{label}} must not exceed 20 characters
       </div>
     </div> 

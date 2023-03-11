@@ -1,8 +1,9 @@
 <div class="register-form">
   <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
 
-    <app-input [formControle]="f['emp_id']" [submitted]="submitted" [label]="'Employe ID'"></app-input>
-    <app-input [formControle]="f['firist_name']"  [submitted]="submitted" [label]="'First Name'"></app-input>
+    <app-input [control]="f['emp_id']" [submitted]="submitted" [label]="'Employe ID'"></app-input>
+    
+    <app-input [control]="f['firist_name']"  [submitted]="submitted" [label]="'First Name'"></app-input>
     
     <!-- <div class="form-group">
       <label>Emp ID</label>

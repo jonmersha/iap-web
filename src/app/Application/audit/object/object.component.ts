@@ -8,6 +8,7 @@ import { RegistrationService } from 'src/app/Application/services/audit/plan/reg
   styleUrls: ['./object.component.sass']
 })
 export class ObjectComponent {
+  
   constructor(private registration:RegistrationService){}
 addObject() {
   var addobject={

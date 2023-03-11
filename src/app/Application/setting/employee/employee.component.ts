@@ -9,10 +9,6 @@ import Validation from 'src/app/utils/validation';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent {
-
-
-
-
   empForms: FormGroup = new FormGroup({
     emp_id: new FormControl('',[Validators.required]),
     firist_name: new FormControl('',this.Vlist(2,20)),

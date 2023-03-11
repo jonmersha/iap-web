@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './auth/components/login/login.component';
 import { PageNotFoundComponent } from './collection/page-not-found/page-not-found.component';
-import { AnualPlanComponent } from './components/audit/audit-plan/anual-plan/anual-plan.component';
-import { PlanDetailsComponent } from './components/audit/audit-plan/plan-details/plan-details.component';
-import { ObjectComponent } from './components/audit/object/object.component';
+import { AnualPlanComponent } from './Application/audit/audit-plan/anual-plan/anual-plan.component';
+import { PlanDetailsComponent } from './Application/audit/audit-plan/plan-details/plan-details.component';
+import { ObjectComponent } from './Application/audit/object/object.component';
 import { HomeComponent } from './layout/home/home.component';
 import { PlanListComponent } from './plan-list/plan-list.component';
 

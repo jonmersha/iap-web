@@ -8,10 +8,8 @@ import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 export class InputComponent {
   
 
-  @Input() formControle: any;
+  @Input() control: any;
   @Input() submitted: boolean = false;
   @Input() label:any
   @Output() valueChange = new EventEmitter();
-
-
 }

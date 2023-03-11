@@ -17,6 +17,28 @@ import { AuditObjectComponent } from './setting/audit-object/audit-object.compon
 import { EmployeeComponent } from './setting/employee/employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './utils/input/input.component';
+import { OuComponent } from './setting/ou/ou.component';
+import { ComboItemsComponent } from './utils/combo-items/combo-items.component';
+import { AnualPlanComponent } from './audit/audit-plan/anual-plan/anual-plan.component';
+import { ObjectComponent } from './audit/object/object.component';
+import { SubjectComponent } from './audit/subject/subject.component';
+import { ChecklistComponent } from './audit/checklist/checklist.component';
+import { CreateComponent } from './audit/program/create/create.component';
+import { ApproveComponent } from './audit/program/approve/approve.component';
+import { NewEngamentComponent } from './audit/engament/new-engament/new-engament.component';
+import { EngamentListComponent } from './audit/engament/engament-list/engament-list.component';
+import { NewFindingComponent } from './audit/finding/new-finding/new-finding.component';
+import { FindingListComponent } from './audit/finding/finding-list/finding-list.component';
+import { FindingEditComponent } from './audit/finding/finding-edit/finding-edit.component';
+import { NewRecomendationComponent } from './audit/recomndation/new-recomendation/new-recomendation.component';
+import { EditRecomendationComponent } from './audit/recomndation/edit-recomendation/edit-recomendation.component';
+import { PageNotFoundComponent } from '../collection/page-not-found/page-not-found.component';
+import { TeamComponent } from './setting/team/team.component';
+import { AudteesComponent } from './setting/audtees/audtees.component';
+import { UserComponent } from './setting/user/user.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -34,6 +56,31 @@ import { InputComponent } from './utils/input/input.component';
     AuditObjectComponent,
     EmployeeComponent,
     InputComponent,
+    OuComponent,
+    ComboItemsComponent,
+    AnualPlanComponent,
+    ObjectComponent,
+   //AuditeesComponent
+
+    
+    SubjectComponent,
+    ChecklistComponent,
+   
+    CreateComponent,
+    ApproveComponent,
+    NewEngamentComponent,
+    EngamentListComponent,
+    NewFindingComponent,
+    FindingListComponent,
+    FindingEditComponent,
+    NewRecomendationComponent,
+    EditRecomendationComponent,
+    PageNotFoundComponent,
+    TeamComponent,
+    AudteesComponent,
+    UserComponent,
+
+
   ],
   imports: [
     CommonModule,

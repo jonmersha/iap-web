@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from '../collection/page-not-found/page-not-found.component';
-import { AuditeesComponent } from '../components/user/auditees/auditees.component';
+
 import { HomeComponent } from './components/home/home.component';
 
 import { DashBoardComponent } from './layout/container/dash-board.component';
@@ -23,7 +23,7 @@ const routes: Routes = [
     {path: 'emp', component: EmployeeComponent,outlet:'sub'},
     {path: 'pwr', component: PasswordRessetComponent,outlet:'sub'},
     {path: 'acc', component: CreateAccountComponent,outlet:'sub'},
-    {path: 'audites', component: AuditeesComponent,outlet:'sub'},
+    
     {path: 'audit-object', component: AuditObjectComponent,outlet:'sub'},
     {path:'**',component:PageNotFoundComponent}
 
