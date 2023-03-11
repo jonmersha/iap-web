@@ -1,39 +1,49 @@
 <div class="register-form">
   <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label>Full Name</label>
-      <input
-        type="text"
-        formControlName="Emplyee ID"
-        class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && form['emp_id'].errors }"
-      />
-      <div *ngIf="submitted && form['emp_id'].errors" class="invalid-feedback">
-        <div *ngIf="form['emp_id'].errors['required']">Employe Id is required</div>
-      </div>
-    </div>
 
-    <div class="form-group">
-      <label>Username</label>
+    <app-input [formControle]="f['emp_id']" [submitted]="submitted" [label]="'Employe ID'"></app-input>
+    <app-input [formControle]="f['firist_name']"  [submitted]="submitted" [label]="'First Name'"></app-input>
+    
+    <!-- <div class="form-group">
+      <label>Emp ID</label>
       <input
         type="text"
-        formControlName="username"
+        formControlName="emp_id"
         class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && form['username'].errors }"
+        [ngClass]="{ 'is-invalid': submitted && f['emp_id'].errors }"
       />
-      <div *ngIf="submitted && form['username'].errors" class="invalid-feedback">
-        <div *ngIf="form['username'].errors['required']">First name is required</div>
-        <div *ngIf="form['username'].errors['minlength']">
-          Username must be at least 6 characters
+      <div *ngIf="submitted && f['emp_id'].errors" class="invalid-feedback">
+        <div *ngIf="f['emp_id'].errors['required']">Employe ID Is required</div>
+      </div>
+    </div> -->
+
+    <!-- <div class="form-group">
+      <label>First Name</label>
+      <input
+        type="text"
+        [formControl]="emp_id"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && emp_id.errors }"
+      />
+      <div *ngIf="submitted && emp_id.errors" class="invalid-feedback">
+        <div *ngIf="emp_id.errors['required']">Username is required</div>
+        
+        <div *ngIf="emp_id.errors['required']">
+          First Name Requres
         </div>
-        <div *ngIf="form['username'].errors['maxlength']">
+        <div *ngIf="emp_id.errors['minlength']">
+          First Name must be at least 2 characters
+        </div>
+        <div *ngIf="emp_id.errors['maxlength']">
           Username must not exceed 20 characters
         </div>
       </div>
-    </div>
+    </div> 
+    -->
+
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="button" class="btn btn-primary" (click)="onSubmit()">Register</button>
       <button
         type="button"
         (click)="onReset()"
@@ -42,5 +52,5 @@
         Reset
       </button>
     </div>
-    </form>
-    </div>
+  </form>
+</div>

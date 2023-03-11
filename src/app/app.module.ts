@@ -46,6 +46,7 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
 import { ChangeAssWordComponent } from './auth/components/change-ass-word/change-ass-word.component';
 import { DeactivateEmployeComponent } from './auth/components/deactivate-employe/deactivate-employe.component';
+import { InputComponent } from './utils/input/input.component';
 
 
 
@@ -89,7 +90,8 @@ import { DeactivateEmployeComponent } from './auth/components/deactivate-employe
     LoginComponent,
     SignupComponent,
     ChangeAssWordComponent,
-    DeactivateEmployeComponent
+    DeactivateEmployeComponent,
+    InputComponent
     
   ],
   imports: [

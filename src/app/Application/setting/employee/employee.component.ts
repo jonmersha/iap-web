@@ -2,12 +2,6 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import Validation from 'src/app/utils/validation';
 
-export class User {
-  public name!: string;
-  public email!: string;
-  public password!: string;
-  public hobbies!: string;
-}
 
 @Component({
   selector: 'app-employee',
@@ -16,9 +10,23 @@ export class User {
 })
 export class EmployeeComponent {
 
-  empForm:FormGroup=new FormGroup({
 
-  emp_id: new FormControl('',this.Vlist(2,6)),
+
+
+  empForms: FormGroup = new FormGroup({
+    emp_id: new FormControl('',[Validators.required]),
+    firist_name: new FormControl('',this.Vlist(2,20)),
+    last_name: new FormControl('',this.Vlist(2,20)),
+    password: new FormControl('',this.Vlist(2,20)),
+    confirmPassword: new FormControl(''),
+    acceptTerms: new FormControl(false),
+  });
+
+ //emp_id= new FormControl('',[Validators.required])
+
+
+  empForm : FormGroup = new FormGroup({
+  emp_id: new FormControl('',[Validators.required]),
   firist_name: new FormControl('',this.Vlist(2,20)),
   midle_name: new FormControl('',this.Vlist(2,20)),
   last_name: new FormControl('',this.Vlist(2,20)),
@@ -50,14 +58,45 @@ export class EmployeeComponent {
 
   constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit() {
+  
+
+  // ngOnInit(): void {
+  //   this.empForm = this.formBuilder.group(
+  //     {
+  //       fullname: ['', Validators.required],
+  //       username: [
+  //         '',
+  //         [
+  //           Validators.required,
+  //           Validators.minLength(6),
+  //           Validators.maxLength(20)
+  //         ]
+  //       ],
+  //       email: ['', [Validators.required, Validators.email]],
+  //       password: [
+  //         '',
+  //         [
+  //           Validators.required,
+  //           Validators.minLength(6),
+  //           Validators.maxLength(40)
+  //         ]
+  //       ],
+  //       confirmPassword: ['', Validators.required],
+  //       acceptTerms: [false, Validators.requiredTrue]
+  //     },
+  //     {
+  //       validators: [Validation.match('password', 'confirmPassword')]
+  //     }
+  //   );
     
-  }
-  get form(): { [key: string]: AbstractControl } {
+  // }
+
+  get f(): { [key: string]: AbstractControl } {
     return this.empForm.controls;
   }
 
   onSubmit(): void {
+    //console.log(this.emp.value)
     this.submitted = true;
 
     if (this.empForm.invalid) {
@@ -74,6 +113,7 @@ export class EmployeeComponent {
   Vlist(minLen:number,maxLen:number){
     return [Validators.required,Validators.minLength(minLen),Validators.maxLength(maxLen)]
   }
+  
 
   
  

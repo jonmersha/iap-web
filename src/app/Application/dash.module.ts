@@ -16,6 +16,7 @@ import { CreateAccountComponent } from './setting/create-account/create-account.
 import { AuditObjectComponent } from './setting/audit-object/audit-object.component';
 import { EmployeeComponent } from './setting/employee/employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputComponent } from './utils/input/input.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateAccountComponent,
     AuditObjectComponent,
     EmployeeComponent,
+    InputComponent,
   ],
   imports: [
     CommonModule,

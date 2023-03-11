@@ -14,8 +14,8 @@ import { CommonService } from 'src/app/Application/services/combo/common.service
 export class ComboItemsComponent implements OnInit{
   @Input() url!:String;
   @Input() ServiceEnd:any;
+
   @Input() control!: FormControl;
- 
   @Output() valueChange = new EventEmitter();
 
   //service: CommonService=new CommonService();
@@ -24,8 +24,8 @@ export class ComboItemsComponent implements OnInit{
   }
   ngOnInit(){
     this.service.getData(this.url).subscribe(resp=>{
-      this.items=resp.data
-      console.log(this.items)
+      this.items = resp.data
+      //console.log(this.items)
     })
 }
  

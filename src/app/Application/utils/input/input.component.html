@@ -1,0 +1,22 @@
+<div class="form-group">
+    <label>{{label}}</label>
+    <input
+      type="text"
+      [formControl]="formControle"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && formControle.errors }"
+    />
+     <div *ngIf="submitted && formControle.errors" class="invalid-feedback">
+      <div *ngIf="formControle.errors['required']">
+        {{label}} Is required
+    </div>
+    <div *ngIf="formControle.errors['minlength']">
+        {{label}} must be at least 2 characters
+      </div>
+      <div *ngIf="formControle.errors['maxlength']">
+        {{label}} must not exceed 20 characters
+      </div>
+    </div> 
+
+
+  </div>

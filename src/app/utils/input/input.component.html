@@ -1,0 +1,13 @@
+
+<div class="form-group">
+    <label>Emp ID</label>
+    <input
+      type="text"
+      formControlName="control"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f['control'].errors }"
+    />
+    <div *ngIf="submitted && f['control'].errors" class="invalid-feedback">
+      <div *ngIf="f['control'].errors['required']">Employe ID Is required</div>
+    </div>
+  </div>
