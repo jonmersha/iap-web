@@ -1,91 +1,26 @@
 <section class="content">
-    <div class="container-fluid">
-        <div class="row">
+  <div class="container-fluid">
 
-<div class="col-12 col-sm-4 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-primary elevation-1"><i class=""></i></span>
-      <div class="info-box-content">
-        <a routerLink="" (click)="navigateTo('dash/setting','sub','')" routerLinkActive="active">
-        <span class="info-box-head">Add Work Unit</span>
-        <span class="info-box-text">Porcess, Subprocess or Team</span>
-      </a>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
+    <app-link-menu 
+    [title_label]="'Create'"
+    [description]="'Employee'"
+    [path]="'dash/setting'" 
+    [ariaDescription]="'sub'" 
+    [component]="'emp'"></app-link-menu>
 
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
-      <div class="info-box-content">
-        <a routerLink="" (click)="navigateTo('dash/setting','sub','emp')" routerLinkActive="active">
-        <span class="info-box-head">Add Employee</span>
-        <span class="info-box-text">Employee Registration</span>
-      </a>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
-      <div class="info-box-content">
-        <a routerLink="" (click)="navigateTo('dash/setting','sub','acc')" routerLinkActive="active">
-        <span class="info-box-head">Create Account</span>
-        <span class="info-box-text">Create Account</span>
-      </a>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
-      <div class="info-box-content">
-        <a routerLink="" (click)="navigateTo('dash/setting','sub','pwr')" routerLinkActive="active">
-        <span class="info-box-head">Password Reset</span>
-        <span class="info-box-text">Password Reset</span>
-      </a>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
-      <div class="info-box-content">
-        <a routerLink="" (click)="navigateTo('dash/setting','sub','audites')" routerLinkActive="active">
-        <span class="info-box-head">Add Auditees</span>
-        <span class="info-box-text">auditees creation</span>
-      </a>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
-      <div class="info-box-content">
-        <a routerLink="" (click)="navigateTo('dash/setting','sub','audit-object')" routerLinkActive="active">
-        <span class="info-box-head">Audit Object</span>
-        <span class="info-box-text">Create Audit Object</span>
-      </a>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-
-
+    <app-link-menu 
+    [title_label]="'Create'"
+    [description]="'Work Unit'"
+    [path]="'dash/setting'" 
+    [ariaDescription]="'sub'" 
+    [component]="'ou'"
+    ></app-link-menu>
   
 </div>
-</div>
-</section>
+</section> 
+
+
+
+ 
+
+

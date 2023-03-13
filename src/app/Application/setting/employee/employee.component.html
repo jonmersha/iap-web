@@ -1,57 +1,34 @@
-<div class="register-form">
+<h1>Creting employee</h1>
+<div class="container">
   <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
-
-    <app-input [control]="f['emp_id']" [submitted]="submitted" [label]="'Employe ID'"></app-input>
-    
-    <app-input [control]="f['firist_name']"  [submitted]="submitted" [label]="'First Name'"></app-input>
-    
-    <!-- <div class="form-group">
-      <label>Emp ID</label>
-      <input
-        type="text"
-        formControlName="emp_id"
-        class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f['emp_id'].errors }"
-      />
-      <div *ngIf="submitted && f['emp_id'].errors" class="invalid-feedback">
-        <div *ngIf="f['emp_id'].errors['required']">Employe ID Is required</div>
+    <div class="row g-3">
+      <div class="col-md-2">
+        <app-input [control]="f['emp_id']" [submitted]="submitted" [label]="'Employe ID'"></app-input>
       </div>
-    </div> -->
-
-    <!-- <div class="form-group">
-      <label>First Name</label>
-      <input
-        type="text"
-        [formControl]="emp_id"
-        class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && emp_id.errors }"
-      />
-      <div *ngIf="submitted && emp_id.errors" class="invalid-feedback">
-        <div *ngIf="emp_id.errors['required']">Username is required</div>
-        
-        <div *ngIf="emp_id.errors['required']">
-          First Name Requres
-        </div>
-        <div *ngIf="emp_id.errors['minlength']">
-          First Name must be at least 2 characters
-        </div>
-        <div *ngIf="emp_id.errors['maxlength']">
-          Username must not exceed 20 characters
-        </div>
+      <div class="col-md-3">
+        <app-input [control]="f['firist_name']"  [submitted]="submitted" [label]="'First Name'"></app-input>
       </div>
-    </div> 
-    -->
-
-
+      <div class="col-md-3">
+        <app-input [control]="f['midle_name']"  [submitted]="submitted" [label]="'Middle Name'"></app-input>
+      </div>
+      <div class="col-md-3">
+        <app-input [control]="f['last_name']"  [submitted]="submitted" [label]="'Last Name'"></app-input>
+      </div>
+</div>
+<div row >
+  <app-combo-items></app-combo-items>
+</div>
+    
     <div class="form-group">
       <button type="button" class="btn btn-primary" (click)="onSubmit()">Register</button>
       <button
         type="button"
         (click)="onReset()"
-        class="btn btn-warning float-right"
-      >
+        class="btn btn-warning float-right">
         Reset
       </button>
     </div>
   </form>
 </div>
+
+<!-- WesendB@Shemta123321 -->

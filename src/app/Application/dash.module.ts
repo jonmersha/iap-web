@@ -36,6 +36,7 @@ import { PageNotFoundComponent } from '../collection/page-not-found/page-not-fou
 import { TeamComponent } from './setting/team/team.component';
 import { AudteesComponent } from './setting/audtees/audtees.component';
 import { UserComponent } from './setting/user/user.component';
+import { LinkMenuComponent } from './utils/link-menu/link-menu.component';
 
 
 
@@ -79,6 +80,7 @@ import { UserComponent } from './setting/user/user.component';
     TeamComponent,
     AudteesComponent,
     UserComponent,
+    LinkMenuComponent,
 
 
   ],
