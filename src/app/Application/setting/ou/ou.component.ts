@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  FormBuilder,
+  Validators,
+  AbstractControl,
+} from '@angular/forms';
 
 import Validation from 'src/app/utils/validation';
-
 
 @Component({
   selector: 'app-ou',
   templateUrl: './ou.component.html',
-  styleUrls: ['./ou.component.css']
+  styleUrls: ['./ou.component.css'],
 })
-
-export class OuComponent implements OnInit{
-
+export class OuComponent implements OnInit {
   form: FormGroup = new FormGroup({
-    name: new FormControl('',[Validators.required]),
+    name: new FormControl('', [Validators.required]),
     organ_level: new FormControl(''),
     parent_ou: new FormControl(''),
     organ_type: new FormControl(''),
@@ -23,7 +26,7 @@ export class OuComponent implements OnInit{
 
   constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit(){}
+  ngOnInit() {}
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
   }
@@ -42,7 +45,4 @@ export class OuComponent implements OnInit{
     this.submitted = false;
     this.form.reset();
   }
-
-  
- 
 }
