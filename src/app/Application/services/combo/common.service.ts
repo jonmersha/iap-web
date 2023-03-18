@@ -13,6 +13,7 @@ export class CommonService {
   constructor(private http: HttpClient) { }
 
     getData(url:String): Observable<any> {
+      console.log(`${API_BASE_URL}/${url}`,httpOptions)
     return this.http.get(`${API_BASE_URL}/${url}`,httpOptions);
   }
 

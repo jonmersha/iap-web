@@ -37,6 +37,7 @@ import { TeamComponent } from './setting/team/team.component';
 import { AudteesComponent } from './setting/audtees/audtees.component';
 import { UserComponent } from './setting/user/user.component';
 import { LinkMenuComponent } from './utils/link-menu/link-menu.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 
@@ -81,6 +82,7 @@ import { LinkMenuComponent } from './utils/link-menu/link-menu.component';
     AudteesComponent,
     UserComponent,
     LinkMenuComponent,
+    
 
 
   ],
@@ -88,7 +90,8 @@ import { LinkMenuComponent } from './utils/link-menu/link-menu.component';
     CommonModule,
     DashRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule
   ]
 })
 

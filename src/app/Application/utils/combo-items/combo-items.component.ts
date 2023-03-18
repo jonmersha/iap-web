@@ -12,7 +12,7 @@ import { CommonService } from 'src/app/Application/services/combo/common.service
 export class ComboItemsComponent implements OnInit{
   @Input() url!:String;
   @Input() ServiceEnd:any;
-
+  @Input() label:any
   @Input() control!: any;
   @Output() valueChange = new EventEmitter();
 

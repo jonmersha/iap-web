@@ -18,10 +18,13 @@ export class EmployeeComponent {
   employee_ou: new FormControl('',this.Vlist(2,20)),
   job_title: new FormControl('',this.Vlist(2,20)),
   is_auditor: new FormControl('',this.Vlist(2,20)),
+  
+  
   email_id: new FormControl('',this.Vlist(2,20)),
   phone_number: new FormControl('',this.Vlist(2,20)),
   office_location: new FormControl('',this.Vlist(2,20)),
-  is_email_confirmed:new FormControl('',this.Vlist(2,20)),
+
+  is_email_confirmed:new FormControl('0',this.Vlist(2,20)),
   organ_type: new FormControl('',this.Vlist(2,20))
 
   })
@@ -38,10 +41,12 @@ export class EmployeeComponent {
     //console.log(this.emp.value)
     this.submitted = true;
 
-    if (this.empForm.invalid) {
-      return;
-    }
+    // if (this.empForm.invalid) {
+    //   return;
+    // }
     console.log(JSON.stringify(this.empForm.value, null, 2));
+
+    //send to server
   }
 
   onReset(): void {
