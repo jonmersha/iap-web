@@ -1,0 +1,31 @@
+<section>
+  <!-- <div class="row g-12">
+    <input
+      height="300"
+      type="checkbox"
+      [formControl]="control"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && control.errors }"
+    />
+    <label>{{ label }}</label>
+  </div>
+  <div *ngIf="submitted && control.errors" class="invalid-feedback">
+    <div *ngIf="control.errors['required']">{{ label }} Is required</div>
+    <div *ngIf="control.errors['minlength']">
+      {{ label }} must be at least 2 characters
+    </div>
+    <div *ngIf="control.errors['maxlength']">
+      {{ label }} must not exceed 20 characters
+    </div>
+  </div> -->
+  <label><input type="checkbox" [formControl]="control" />{{ label }}</label>
+  <div *ngIf="submitted && control.errors" class="invalid-feedback">
+    <div *ngIf="control.errors['required']">{{ label }} Is required</div>
+    <div *ngIf="control.errors['minlength']">
+      {{ label }} must be at least 2 characters
+    </div>
+    <div *ngIf="control.errors['maxlength']">
+      {{ label }} must not exceed 20 characters
+    </div>
+  </div>
+</section>

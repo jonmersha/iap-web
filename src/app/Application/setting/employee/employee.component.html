@@ -1,68 +1,101 @@
-<h1>Creting employee</h1>
-<div class="container">
+<div class="container container-fluid">
+  <h1>Creting employee</h1>
   <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
     <div class="row g-6">
       <div class="col-md-3">
-        <app-input [control]="f['emp_id']" [submitted]="submitted" [label]="'Employe ID'"></app-input>
+        <app-input
+          [control]="f['emp_id']"
+          [submitted]="submitted"
+          [label]="'Employe ID'"
+        ></app-input>
       </div>
     </div>
     <div class="row g-12">
-     
       <div class="col-md-4">
-        <app-input [control]="f['firist_name']"  [submitted]="submitted" [label]="'First Name'"></app-input>
+        <app-input
+          [control]="f['firist_name']"
+          [submitted]="submitted"
+          [label]="'First Name'"
+        ></app-input>
       </div>
       <div class="col-md-4">
-        <app-input [control]="f['midle_name']"  [submitted]="submitted" [label]="'Middle Name'"></app-input>
+        <app-input
+          [control]="f['midle_name']"
+          [submitted]="submitted"
+          [label]="'Middle Name'"
+        ></app-input>
       </div>
       <div class="col-md-4">
-        <app-input [control]="f['last_name']"  [submitted]="submitted" [label]="'Last Name'"></app-input>
+        <app-input
+          [control]="f['last_name']"
+          [submitted]="submitted"
+          [label]="'Last Name'"
+        ></app-input>
       </div>
-</div>
-<div class="row g-6">
-  
-    <div class="col-md-6">
-     <app-combo-items [label]="'Employe Unit'" [control]="f['employee_ou']" [url]="'ou/get'"></app-combo-items>
     </div>
-    <div class="col-md-6">
-     <app-combo-items [label]="'Unit Type'" [control]="f['organ_type']" [url]="'oc/get'"></app-combo-items>
-    </div>
-    
-     
-   </div>
-   <div class="form-group">
-    <div class="row g-12">
-      <div class="col-md-4">
-        <app-input [control]="f['job_title']"  [submitted]="submitted" [label]="'Job Titile'"></app-input>
-      </div>
-      <div class="col-md-4">
-        <app-input [control]="f['email_id']"  [submitted]="submitted" [label]="'Email'"></app-input>
-      </div>
-    
-      <div class="col-md-4">
-        <app-input [control]="f['phone_number']"  [submitted]="submitted" [label]="'phone'"></app-input>
-      </div>    
-    </div>
-    
-   </div>
-   <div class="form-group">
     <div class="row g-6">
       <div class="col-md-6">
-        
-        <mat-radio-group aria-label="Select an option" formControlName="empForm.controls['is_auditor']">
-          <mat-radio-button value="1">Auditor</mat-radio-button>
-          <mat-radio-button value="0" >Non Auditor</mat-radio-button>
-        </mat-radio-group>
+        <app-combo-items
+          [label]="'Employe Unit'"
+          [control]="f['employee_ou']"
+          [url]="'ou/get'"
+        ></app-combo-items>
+      </div>
+      <div class="col-md-6">
+        <app-combo-items
+          [label]="'Unit Type'"
+          [control]="f['organ_type']"
+          [url]="'oc/get'"
+        ></app-combo-items>
       </div>
     </div>
-   </div>
-
-    
     <div class="form-group">
-      <button type="button" class="btn btn-primary" (click)="onSubmit()">Register</button>
+      <div class="row g-12">
+        <div class="col-md-4">
+          <app-input
+            [control]="f['job_title']"
+            [submitted]="submitted"
+            [label]="'Job Titile'"
+          ></app-input>
+        </div>
+        <div class="col-md-4">
+          <app-input
+            [control]="f['email_id']"
+            [submitted]="submitted"
+            [label]="'Email'"
+          ></app-input>
+        </div>
+
+        <div class="col-md-4">
+          <app-input
+            [control]="f['phone_number']"
+            [submitted]="submitted"
+            [label]="'phone'"
+          ></app-input>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row g-6">
+        <div class="col-md-4">
+          <app-check-box-input
+            [control]="f['is_auditor']"
+            [submitted]="submitted"
+            [label]="' Audtor'"
+          ></app-check-box-input>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" (click)="onSubmit()">
+        Register
+      </button>
       <button
         type="button"
         (click)="onReset()"
-        class="btn btn-warning float-right">
+        class="btn btn-warning float-right"
+      >
         Reset
       </button>
     </div>

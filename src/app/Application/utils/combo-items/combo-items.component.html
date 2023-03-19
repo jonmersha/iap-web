@@ -1,7 +1,16 @@
-<label>{{label}}</label>
-<select [formControl]="control" class="form-control select2" style="width: 100%;">
-    <label>Select One </label>
-    <option defaultSelected="true">Please Select One</option>
-    <option *ngFor="let item of items" [value]="item.id" background-color: skyblue>{{ item.name }}</option>
+<label>{{ label }}</label>
+<select
+  [formControl]="control"
+  class="form-control select2"
+  style="width: 100%"
+>
+  <label>Select One </label>
+  <option
+    *ngFor="let item of items"
+    [value]="item.id"
+    background-color:
+    skyblue
+  >
+    {{ item.name }}
+  </option>
 </select>
-

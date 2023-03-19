@@ -1,1 +1,54 @@
-<p>audtees works!</p>
+<div class="container container-fluid">
+  <h1>Create Work Unit</h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row g-6">
+      <div class="col-md-4">
+        <app-input
+          [control]="f['name']"
+          [submitted]="submitted"
+          [label]="'Unit Name'"
+        ></app-input>
+      </div>
+
+      <div class="col-md-4">
+        <label>Unit Level</label>
+        <app-combo-items
+          [control]="f['organ_level']"
+          [url]="'unitl/get'"
+        ></app-combo-items>
+      </div>
+    </div>
+    <div class="row g-12">
+      <div class="col-md-4">
+        <label>Parent Unit</label>
+        <app-combo-items
+          [control]="f['parent_ou']"
+          [url]="'ou/get'"
+        ></app-combo-items>
+      </div>
+
+      <div class="col-md-4">
+        <label>Unit Type</label>
+        <app-combo-items
+          [control]="f['organ_type']"
+          [url]="'oc/get'"
+        ></app-combo-items>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <div class="row g-12">
+      <div class="form-group col-8">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button
+          type="button"
+          (click)="onReset()"
+          class="btn btn-warning float-right"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -4,29 +4,20 @@ import { CommonService } from 'src/app/Application/services/combo/common.service
 @Component({
   selector: 'app-combo-items',
   templateUrl: './combo-items.component.html',
-  styleUrls:['./combo-items.component.css']
-
-
-
+  styleUrls: ['./combo-items.component.css'],
 })
-export class ComboItemsComponent implements OnInit{
-  @Input() url!:String;
-  @Input() ServiceEnd:any;
-  @Input() label:any
+export class ComboItemsComponent implements OnInit {
+  @Input() url!: String;
+  @Input() ServiceEnd: any;
+  @Input() label: any;
   @Input() control!: any;
   @Output() valueChange = new EventEmitter();
 
   items: any;
-  constructor(private service:CommonService){
+  constructor(private service: CommonService) {}
+  ngOnInit() {
+    this.service.getData(this.url).subscribe((resp) => {
+      this.items = resp.data;
+    });
   }
-  ngOnInit(){
-    this.service.getData(this.url).subscribe(resp=>{
-      //console.log(resp.data)
-      this.items = resp.data
-
-    })
 }
- 
-}
-
-

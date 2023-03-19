@@ -1,27 +1,27 @@
 import { Component } from '@angular/core';
 import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder,
   AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-audtees',
-  templateUrl: './audtees.component.html',
-  styleUrls: ['./audtees.component.css'],
+  selector: 'app-create-annual-plan',
+  templateUrl: './create-annual-plan.component.html',
+  styleUrls: ['./create-annual-plan.component.css'],
 })
-export class AudteesComponent {
+export class CreateAnnualPlanComponent {
   form: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    organ_level: new FormControl(''),
-    parent_ou: new FormControl(''),
-    organ_type: new FormControl(''),
-    ou_leader: new FormControl(''),
+    audit_subject: new FormControl('', [Validators.required]),
+    auditees: new FormControl(''),
+    team_id: new FormControl(''),
+    audit_year: new FormControl(''),
+    risk_score: new FormControl(''),
+    risk_level: new FormControl(''),
   });
   submitted = false;
-
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {}

@@ -9,25 +9,26 @@ import { ObjectComponent } from './Application/audit/object/object.component';
 import { HomeComponent } from './layout/home/home.component';
 import { PlanListComponent } from './plan-list/plan-list.component';
 
-
 const routes: Routes = [
-  // {path:'',component:HomeComponent}, 
+  // {path:'',component:HomeComponent},
   // {path:'Plan',component:AnualPlanComponent},
   // {path:'planlist',component:PlanListComponent},
   // {path:'detail/:id',component:PlanDetailsComponent},
   // {path:'audit_object',component:ObjectComponent},
-  
-  {path:'login',component:LoginComponent},
-  {path:'',redirectTo:'/login',pathMatch:'full'},
+
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
-    path:'dash',
-    canActivate:[AuthGuard],
-    loadChildren:()=>import('./Application/dash.module').then(x=>x.DashModule)},
-  {path:'**',component:PageNotFoundComponent},
+    path: 'dash',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./Application/dash.module').then((x) => x.DashModule),
+  },
+  // {path:'**',component:PageNotFoundComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

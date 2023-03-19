@@ -1,1 +1,45 @@
-<p>audit-object works!</p>
+<div class="container">
+  <h1>Create Audit Object</h1>
+  <form [formGroup]="auditObject" (ngSubmit)="onSubmit()">
+    <div class="row g-6">
+      <div class="col-md-6">
+        <app-combo-items
+          [label]="'Audit Type/Team'"
+          [control]="f['audit_cat']"
+          [url]="'type/get'"
+        ></app-combo-items>
+      </div>
+      <div class="col-md-3">
+        <app-input
+          [control]="f['name']"
+          [submitted]="submitted"
+          [label]="'Audit Object Name'"
+        ></app-input>
+      </div>
+    </div>
+    <div class="row g-12">
+      <div class="col-md-4">
+        <app-input
+          [control]="f['firist_name']"
+          [submitted]="submitted"
+          [label]="'First Name'"
+        ></app-input>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" (click)="onSubmit()">
+        Register
+      </button>
+      <button
+        type="button"
+        (click)="onReset()"
+        class="btn btn-warning float-right"
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- WesendB@Shemta123321 -->

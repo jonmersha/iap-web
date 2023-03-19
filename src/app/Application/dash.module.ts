@@ -38,9 +38,16 @@ import { AudteesComponent } from './setting/audtees/audtees.component';
 import { UserComponent } from './setting/user/user.component';
 import { LinkMenuComponent } from './utils/link-menu/link-menu.component';
 import { MatRadioModule } from '@angular/material/radio';
-
-
-
+import { CheckBoxInputComponent } from './utils/check-box-input/check-box-input.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { PlanYearComponent } from './setting/plan-year/plan-year.component';
+import { CreateAnnualPlanComponent } from './setting/create-annual-plan/create-annual-plan.component';
+import { AuditListComponent } from './audit/audit-list/audit-list.component';
+import { PlanFormComponent } from './audit/plan-form/plan-form.component';
+import { PlanDetailComponent } from './audit/plan-detail/plan-detail.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -62,12 +69,11 @@ import { MatRadioModule } from '@angular/material/radio';
     ComboItemsComponent,
     AnualPlanComponent,
     ObjectComponent,
-   //AuditeesComponent
+    //AuditeesComponent
 
-    
     SubjectComponent,
     ChecklistComponent,
-   
+
     CreateComponent,
     ApproveComponent,
     NewEngamentComponent,
@@ -82,17 +88,23 @@ import { MatRadioModule } from '@angular/material/radio';
     AudteesComponent,
     UserComponent,
     LinkMenuComponent,
-    
-
-
+    CheckBoxInputComponent,
+    PlanYearComponent,
+    CreateAnnualPlanComponent,
+    AuditListComponent,
+    PlanFormComponent,
+    PlanDetailComponent,
   ],
   imports: [
     CommonModule,
     DashRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatRadioModule
-  ]
+    MatRadioModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatSelectModule,
+  ],
 })
-
-export class DashModule { }
+export class DashModule {}

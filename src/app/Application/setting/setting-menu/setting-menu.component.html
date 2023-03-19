@@ -1,26 +1,40 @@
-<section class="content">
-  <div class="container-fluid">
-
-    <app-link-menu 
-    [title_label]="'Create'"
-    [description]="'Employee'"
-    [path]="'dash/setting'" 
-    [ariaDescription]="'sub'" 
-    [component]="'emp'"></app-link-menu>
-
-    <app-link-menu 
-    [title_label]="'Create'"
-    [description]="'Work Unit'"
-    [path]="'dash/setting'" 
-    [ariaDescription]="'sub'" 
-    [component]="'ou'"
-    ></app-link-menu>
-  
+<div class="container-fluid">
+  <div class="row g-12">
+    <div class="col-md-2">
+      <app-link-menu
+        [title_label]="'Create'"
+        [description]="'Employee'"
+        [path]="'dash/setting'"
+        [ariaDescription]="'sub'"
+        [component]="'emp'"
+      ></app-link-menu>
+    </div>
+    <div class="col-md-2">
+      <app-link-menu
+        [title_label]="'Create'"
+        [description]="'Work Unit'"
+        [path]="'dash/setting'"
+        [ariaDescription]="'sub'"
+        [component]="'ou'"
+      ></app-link-menu>
+    </div>
+    <div class="col-md-2">
+      <app-link-menu
+        [title_label]="'Create'"
+        [description]="'Audit Object'"
+        [path]="'dash/setting'"
+        [ariaDescription]="'sub'"
+        [component]="'object'"
+      ></app-link-menu>
+    </div>
+    <div class="col-md-2">
+      <app-link-menu
+        [title_label]="'Create'"
+        [description]="'Auditees'"
+        [path]="'dash/setting'"
+        [ariaDescription]="'sub'"
+        [component]="'auditees'"
+      ></app-link-menu>
+    </div>
+  </div>
 </div>
-</section> 
-
-
-
- 
-
-
