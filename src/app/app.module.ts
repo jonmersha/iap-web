@@ -13,14 +13,14 @@ import { LoginComponent } from './auth/components/login/login.component';
 ////import { ASideComponent } from './layout/a-side/a-side.component';
 
 //import { WrapperComponent } from './layout/wrapper/wrapper.component';
-import { AnualPlanListComponent } from './Application/audit/audit-plan/anual-plan-list/anual-plan-list.component';
+import { AnualPlanListComponent } from './Application/audit-oprations/audit-plan/anual-plan-list/anual-plan-list.component';
 import { NewUserComponent } from './components/user/new-user/new-user.component';
 import { UserEditComponent } from './components/user/user-edit/user-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 //import { UploadAnualPlanComponent } from './Application/audit/audit-plan/upload-anual-plan/upload-anual-plan.component';
 
 //import { PlanDetailsComponent } from './Application/audit/audit-plan/plan-details/plan-details.component';
-import { ObjectComponent } from './Application/audit/object/object.component';
+import { ObjectComponent } from './Application/audit-oprations/object/object.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { AuditeesComponent } from './components/user/auditees/auditees.component';
 //import { SubjectComponent } from './Application/audit/subject/subject.component';

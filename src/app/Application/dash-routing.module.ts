@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from '../collection/page-not-found/page-not-found.component';
-
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from '../layout/home/home.component';
+import { CreateAnnualPlanComponent } from './audit-oprations/create-annual-plan/create-annual-plan.component';
 
 import { DashBoardComponent } from './layout/container/dash-board.component';
 import { AuditObjectComponent } from './setting/audit-object/audit-object.component';
 import { AudteesComponent } from './setting/audtees/audtees.component';
 import { CreateAccountComponent } from './setting/create-account/create-account.component';
-import { CreateAnnualPlanComponent } from './setting/create-annual-plan/create-annual-plan.component';
+
 import { EmployeeComponent } from './setting/employee/employee.component';
 import { OuComponent } from './setting/ou/ou.component';
 import { PasswordRessetComponent } from './setting/password-resset/password-resset.component';
