@@ -16,8 +16,8 @@ import { RegistrationService } from '../services/registration.service';
 export class AuditObjectComponent {
   auditObject: FormGroup = new FormGroup({
     audit_cat: new FormControl('', this.Vlist(2, 20)),
-    name: new FormControl('', this.Vlist(2, 20)),
-    description: new FormControl('', this.Vlist(50, 500)),
+    name: new FormControl('', this.Vlist(2, 100)),
+    description: new FormControl('', this.Vlist(200, 3000)),
   });
 
   submitted = false;
@@ -29,13 +29,10 @@ export class AuditObjectComponent {
   }
 
   onSubmit(): void {
-    //console.log(this.emp.value)
     this.submitted = true;
-
     if (this.auditObject.valid) {
       console.log(this.auditObject.invalid);
       console.log(JSON.stringify(this.auditObject.value, null, 2));
-
       return;
     }
     console.log(JSON.stringify(this.auditObject.value, null, 2));

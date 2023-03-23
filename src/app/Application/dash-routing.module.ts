@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from '../collection/page-not-found/page-not-found.component';
 import { HomeComponent } from '../layout/home/home.component';
-import { CreateAnnualPlanComponent } from './audit-oprations/create-annual-plan/create-annual-plan.component';
+import { CreateAnnualPlanComponent } from './audit-operations/annual-plan/create-annual-plan/create-annual-plan.component';
+import { DetailsComponent } from './audit-operations/annual-plan/details/details.component';
 
 import { DashBoardComponent } from './layout/container/dash-board.component';
 import { AuditObjectComponent } from './setting/audit-object/audit-object.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'cap', component: CreateAnnualPlanComponent },
       { path: 'py', component: PlanYearComponent },
+      { path: 'plan_details/:id', component: DetailsComponent },
 
       {
         path: 'setting',
@@ -34,7 +36,6 @@ const routes: Routes = [
           { path: 'pwr', component: PasswordRessetComponent, outlet: 'sub' },
           { path: 'acc', component: CreateAccountComponent, outlet: 'sub' },
           { path: 'auditees', component: AudteesComponent, outlet: 'sub' },
-
           { path: 'object', component: AuditObjectComponent, outlet: 'sub' },
           { path: '**', component: PageNotFoundComponent },
         ],

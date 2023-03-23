@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-header border-transparent">
+    <h3 class="card-title">PLAN DETAIL:</h3>
+    <div class="card-tools">
+      <button mat-flat-button>
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+        <i class="fas fa-minus"></i>
+      </button>
+      <!-- <button type="button" class="btn btn-tool" data-card-widget="expand">
+                <i class="fas fa-times"></i>
+              </button> -->
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div class="container-fluid">
+      <table class="table m-0">
+        <tr>
+          <th>Plan Id</th>
+          <td>{{ planDetails.plan_id }}</td>
+        </tr>
+        <tr>
+          <th>Audit Object</th>
+          <td>{{ planDetails.audit_name }}</td>
+        </tr>
+        <tr>
+          <th>Auditees</th>
+          <td>{{ planDetails.auditees_name }}</td>
+        </tr>
+        <tr>
+          <th>Audit Team</th>
+          <td>{{ planDetails.audit_team_name }}</td>
+        </tr>
+        <tr>
+          <th>Quarter</th>
+          <td>{{ planDetails.quarter }}</td>
+        </tr>
+        <tr>
+          <th>Month</th>
+          <td>{{ planDetails.month }}</td>
+        </tr>
+        <tr>
+          <th>Rectifcation Status</th>
+          <td>{{ planDetails.rect_status }}</td>
+        </tr>
+        <tr>
+          <th>Rectificatoin %</th>
+          <td>{{ planDetails.rectification_percentage }}</td>
+        </tr>
+        <tr>
+          <th>Current Status</th>
+          <td>{{ planDetails.audit_status }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

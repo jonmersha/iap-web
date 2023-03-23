@@ -19,19 +19,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './utils/input/input.component';
 import { OuComponent } from './setting/ou/ou.component';
 import { ComboItemsComponent } from './utils/combo-items/combo-items.component';
-import { AnualPlanComponent } from './audit-oprations/audit-plan/anual-plan/anual-plan.component';
-import { ObjectComponent } from './audit-oprations/object/object.component';
-import { SubjectComponent } from './audit-oprations/subject/subject.component';
-import { ChecklistComponent } from './audit-oprations/checklist/checklist.component';
-import { CreateComponent } from './audit-oprations/program/create/create.component';
-import { ApproveComponent } from './audit-oprations/program/approve/approve.component';
-import { NewEngamentComponent } from './audit-oprations/engament/new-engament/new-engament.component';
-import { EngamentListComponent } from './audit-oprations/engament/engament-list/engament-list.component';
-import { NewFindingComponent } from './audit-oprations/finding/new-finding/new-finding.component';
-import { FindingListComponent } from './audit-oprations/finding/finding-list/finding-list.component';
-import { FindingEditComponent } from './audit-oprations/finding/finding-edit/finding-edit.component';
-import { NewRecomendationComponent } from './audit-oprations/recomndation/new-recomendation/new-recomendation.component';
-import { EditRecomendationComponent } from './audit-oprations/recomndation/edit-recomendation/edit-recomendation.component';
+import { SubjectComponent } from './audit-operations/subject/subject.component';
+import { ChecklistComponent } from './audit-operations/checklist/checklist.component';
+import { NewEngamentComponent } from './audit-operations/engament/new-engament/new-engament.component';
+import { EngamentListComponent } from './audit-operations/engament/engament-list/engament-list.component';
+
 import { PageNotFoundComponent } from '../collection/page-not-found/page-not-found.component';
 import { TeamComponent } from './setting/team/team.component';
 import { AudteesComponent } from './setting/audtees/audtees.component';
@@ -44,13 +36,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PlanYearComponent } from './setting/plan-year/plan-year.component';
 
-import { AuditListComponent } from './audit-oprations/audit-list/audit-list.component';
-
-import { PlanDetailComponent } from './audit-oprations/plan-detail/plan-detail.component';
 import { MatSelectModule } from '@angular/material/select';
-import { CreateAnnualPlanComponent } from './audit-oprations/create-annual-plan/create-annual-plan.component';
+import { CreateAnnualPlanComponent } from './audit-operations/annual-plan/create-annual-plan/create-annual-plan.component';
 import { HomeComponent } from '../layout/home/home.component';
-import { PlanFormComponent } from './audit-oprations/plan-form/plan-form.component';
+import { PlanFormComponent } from './audit-operations/annual-plan/plan-form/plan-form.component';
+import { AuditListComponent } from './audit-operations/annual-plan/plan-list/audit-list.component';
+import { DetailsComponent } from './audit-operations/annual-plan/details/details.component';
+import { PlanContainerComponent } from './audit-operations/annual-plan/plan-container/plan-container.component';
+import { ObjectContainerComponent } from './audit-operations/annual-plan/object-container/object-container.component';
+import { ChecklistContainerComponent } from './audit-operations/annual-plan/checklist-container/checklist-container.component';
+import { TextEditComponent } from './utils/text-edit/text-edit.component';
 
 @NgModule({
   declarations: [
@@ -69,22 +64,12 @@ import { PlanFormComponent } from './audit-oprations/plan-form/plan-form.compone
     InputComponent,
     OuComponent,
     ComboItemsComponent,
-    AnualPlanComponent,
-    ObjectComponent,
-    //AuditeesComponent
 
     SubjectComponent,
     ChecklistComponent,
 
-    CreateComponent,
-    ApproveComponent,
     NewEngamentComponent,
     EngamentListComponent,
-    NewFindingComponent,
-    FindingListComponent,
-    FindingEditComponent,
-    NewRecomendationComponent,
-    EditRecomendationComponent,
     PageNotFoundComponent,
     TeamComponent,
     AudteesComponent,
@@ -95,7 +80,11 @@ import { PlanFormComponent } from './audit-oprations/plan-form/plan-form.compone
     CreateAnnualPlanComponent,
     AuditListComponent,
     PlanFormComponent,
-    PlanDetailComponent,
+    DetailsComponent,
+    PlanContainerComponent,
+    ObjectContainerComponent,
+    ChecklistContainerComponent,
+    TextEditComponent,
   ],
   imports: [
     CommonModule,

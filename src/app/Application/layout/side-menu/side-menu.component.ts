@@ -41,6 +41,7 @@ export class SideMenuComponent implements OnInit {
 
       const employe = JSON.parse(localStorage.getItem('employee')!);
       this.user_name = `${employe.firist_name} ${employe.midle_name} ${employe.last_name}`;
+
       //console.log(employe);
     });
   }
